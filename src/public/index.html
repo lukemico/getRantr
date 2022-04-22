@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>getRANTr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/index.css" />
+</head>
+<body>
+
+  <header>
+    <div class="titlebar">
+      <h1>getRANTr &ndash; <em>Where it's all about you</em></h1>
+    </div>
+  </header>
+
+  <div class="col col-1">
+    <div id="user"></div>
+  </div>
+
+  <div class="col col-2">
+    <div id="add-rant">
+      <form target="/api/rant" method="post" ignore>
+        <label for="rant_text">What has you on a soapbox today?</label>
+        <textarea id="rant_text" name="rant" placeholder="Well, actually..."></textarea>
+        <div class="controls pull-right">
+          <button type="submit">Rant</button>
+        </div>
+      </form>
+    </div>
+    <div id="timeline"></div>
+  </div>
+
+  <div class="col col-3">
+    <div id="ads"></div>
+  </div>
+
+  <!-- BEGIN TRACKJS -->
+  <script type="text/javascript">window._trackJs = { token: 'GETRANTR' };</script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/vendor/tracker.js"></script>
+  <!-- END TRACKJS -->
+
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/vendor/analytics.js"></script>
+
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/vendor/jquery.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/vendor/lodash.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/vendor/backbone.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/vendor/moment.js"></script>
+
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/adModel.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/rantModel.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/userModel.js"></script>
+
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/adListView.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/userView.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/addRantView.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/rantListView.js"></script>
+
+  <script type="text/javascript" src="http://cdn.getrantr.com:9000/scripts/index.js"></script>
+
+</body>
+</html>
