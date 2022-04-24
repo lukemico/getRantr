@@ -21,12 +21,12 @@ var RantView = Backbone.View.extend({
 	},
 
 	initialize: function () {
-		// alert("Hey Frontend Masters"); Add Alert to show Workspace configuration.
 		this.model.on('change', this.render, this);
 		this.$el.on(
 			'click',
 			function (evt) {
 				if (evt.target.matches('.js-delete')) {
+					evt.preventDefault();
 					this.onDelete(evt);
 				}
 			}.bind(this)
@@ -39,10 +39,12 @@ var RantView = Backbone.View.extend({
 	},
 
 	onDelete: function () {
-		setTimeout(function () {
-			this.model.destroy();
-			this.remove();
-		});
+		setTimeout(
+			function () {
+				this.model.destroy();
+				this.remove();
+			}.bind(this)
+		);
 	},
 });
 
